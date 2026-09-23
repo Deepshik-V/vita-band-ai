@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: vitaband_backend
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - OPERATION_MODE=DEMO
+      - DEBUG=false
+      - PRIMARY_EMERGENCY_CONTACT=+91 9876543210
+    volumes:
+      - vitaband_data:/app/data
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: vitaband_frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  vitaband_data:

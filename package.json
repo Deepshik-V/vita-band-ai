@@ -1,0 +1,25 @@
+{
+  "name": "vita-band-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VITA-BAND AI: A secure, AI-powered Personal Health Companion for Smart India Hackathon 2026",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview",
+    "test": "node scripts/test_frontend_ws_client.mjs",
+    "install:frontend": "npm --prefix frontend install"
+  },
+  "keywords": [
+    "sih2026",
+    "health-monitoring",
+    "biometrics",
+    "ai-risk-detection",
+    "fastapi",
+    "react",
+    "vite",
+    "edge-ai"
+  ],
+  "author": "ALPHA MECHS",
+  "license": "MIT"
+}

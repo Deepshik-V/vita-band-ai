@@ -1,0 +1,198 @@
+[
+  {
+    "scenario_id": "NORMAL",
+    "name": "1. Baseline Physiological Normal",
+    "hr": 71.9,
+    "spo2": 98.5,
+    "temp": 36.8,
+    "humidity": 50.0,
+    "activity": "resting",
+    "fall_detected": false,
+    "anomaly_flags": [],
+    "detected_risks": [
+      "NORMAL_STATE"
+    ],
+    "risk_score": 10.0,
+    "risk_level": "NORMAL",
+    "rec_title": "Target Physiological Stability",
+    "rec_urgency": "low",
+    "rec_guidance_count": 3,
+    "alert_triggered": false,
+    "alert_type": "NONE",
+    "status": "PASS"
+  },
+  {
+    "scenario_id": "HEAT_STRESS",
+    "name": "2. Heat Stress & Thermal Overload",
+    "hr": 144.7,
+    "spo2": 94.2,
+    "temp": 39.67,
+    "humidity": 85.4,
+    "activity": "unsteady",
+    "fall_detected": false,
+    "anomaly_flags": [
+      "thermal_overload",
+      "cardiac_rhythm_deviation"
+    ],
+    "detected_risks": [
+      "HEAT_STRESS",
+      "ABNORMAL_VITALS"
+    ],
+    "risk_score": 100.0,
+    "risk_level": "CRITICAL",
+    "rec_title": "Heat Stress Mitigation Protocol",
+    "rec_urgency": "high",
+    "rec_guidance_count": 5,
+    "alert_triggered": true,
+    "alert_type": "CRITICAL_VITALS",
+    "status": "PASS"
+  },
+  {
+    "scenario_id": "DEHYDRATION",
+    "name": "3. Dehydration & Dry Environment",
+    "hr": 122.3,
+    "spo2": 96.5,
+    "temp": 38.38,
+    "humidity": 17.0,
+    "activity": "resting",
+    "fall_detected": false,
+    "anomaly_flags": [
+      "elevated_hr_dry_environment"
+    ],
+    "detected_risks": [
+      "DEHYDRATION"
+    ],
+    "risk_score": 55.0,
+    "risk_level": "WARNING",
+    "rec_title": "Hydration Recovery Advisory",
+    "rec_urgency": "medium",
+    "rec_guidance_count": 4,
+    "alert_triggered": false,
+    "alert_type": "NONE",
+    "status": "PASS"
+  },
+  {
+    "scenario_id": "FATIGUE",
+    "name": "4. Muscular Fatigue & Exhaustion",
+    "hr": 88.1,
+    "spo2": 98.4,
+    "temp": 37.1,
+    "humidity": 55.0,
+    "activity": "unsteady",
+    "fall_detected": false,
+    "anomaly_flags": [
+      "elevated_emg_power"
+    ],
+    "detected_risks": [
+      "FATIGUE"
+    ],
+    "risk_score": 45.0,
+    "risk_level": "WARNING",
+    "rec_title": "Muscle Fatigue & Exhaustion Relief",
+    "rec_urgency": "medium",
+    "rec_guidance_count": 4,
+    "alert_triggered": false,
+    "alert_type": "NONE",
+    "status": "PASS"
+  },
+  {
+    "scenario_id": "ABNORMAL_VITALS",
+    "name": "5. Cardiac Rhythm & Vital Anomaly",
+    "hr": 148.0,
+    "spo2": 87.6,
+    "temp": 36.8,
+    "humidity": 50.0,
+    "activity": "resting",
+    "fall_detected": false,
+    "anomaly_flags": [
+      "hypoxemia",
+      "cardiac_rhythm_deviation"
+    ],
+    "detected_risks": [
+      "RESPIRATORY_RISK",
+      "ABNORMAL_VITALS"
+    ],
+    "risk_score": 95.0,
+    "risk_level": "CRITICAL",
+    "rec_title": "Oxygenation & Respiratory Support",
+    "rec_urgency": "critical",
+    "rec_guidance_count": 4,
+    "alert_triggered": true,
+    "alert_type": "CRITICAL_VITALS",
+    "status": "PASS"
+  },
+  {
+    "scenario_id": "FALL",
+    "name": "6. Sudden Impact Fall & Immobility",
+    "hr": 72.6,
+    "spo2": 98.5,
+    "temp": 36.81,
+    "humidity": 50.1,
+    "activity": "fall_impact",
+    "fall_detected": true,
+    "anomaly_flags": [
+      "impact_vector_spike"
+    ],
+    "detected_risks": [
+      "FALL"
+    ],
+    "risk_score": 95.0,
+    "risk_level": "CRITICAL",
+    "rec_title": "Post-Impact Fall Safety Instructions",
+    "rec_urgency": "critical",
+    "rec_guidance_count": 4,
+    "alert_triggered": true,
+    "alert_type": "FALL_DETECTED",
+    "status": "PASS"
+  },
+  {
+    "scenario_id": "RESPIRATORY_RISK",
+    "name": "7. Hypoxemia & Respiratory Distress",
+    "hr": 131.5,
+    "spo2": 80.6,
+    "temp": 37.2,
+    "humidity": 50.0,
+    "activity": "unsteady",
+    "fall_detected": false,
+    "anomaly_flags": [
+      "hypoxemia",
+      "cardiac_rhythm_deviation"
+    ],
+    "detected_risks": [
+      "RESPIRATORY_RISK",
+      "ABNORMAL_VITALS"
+    ],
+    "risk_score": 95.0,
+    "risk_level": "CRITICAL",
+    "rec_title": "Oxygenation & Respiratory Support",
+    "rec_urgency": "critical",
+    "rec_guidance_count": 4,
+    "alert_triggered": true,
+    "alert_type": "CRITICAL_VITALS",
+    "status": "PASS"
+  },
+  {
+    "scenario_id": "ENVIRONMENTAL_STRESS",
+    "name": "8. Extreme Ambient Hazard",
+    "hr": 95.1,
+    "spo2": 98.5,
+    "temp": 44.55,
+    "humidity": 94.8,
+    "activity": "resting",
+    "fall_detected": false,
+    "anomaly_flags": [
+      "environmental_heat_hazard"
+    ],
+    "detected_risks": [
+      "ENVIRONMENTAL_STRESS"
+    ],
+    "risk_score": 80.0,
+    "risk_level": "CRITICAL",
+    "rec_title": "Environmental Hazard Precautions",
+    "rec_urgency": "medium",
+    "rec_guidance_count": 4,
+    "alert_triggered": true,
+    "alert_type": "CRITICAL_VITALS",
+    "status": "PASS"
+  }
+]
