@@ -13,13 +13,15 @@ Validates each scenario across all 9 dimensions:
 """
 import asyncio
 import json
+import os
+import sys
 import time
 import urllib.request
 import websockets
 from typing import Dict, Any, List
 
-API_BASE_URL = "http://127.0.0.1:8000"
-WS_URL = "ws://127.0.0.1:8000/ws/health-stream"
+API_BASE_URL = sys.argv[1] if len(sys.argv) > 1 else os.getenv("PROD_API_URL", "http://127.0.0.1:8000")
+WS_URL = sys.argv[2] if len(sys.argv) > 2 else os.getenv("PROD_WS_URL", API_BASE_URL.replace("http://", "ws://").replace("https://", "wss://") + "/ws/health-stream")
 
 SCENARIOS = [
     {
