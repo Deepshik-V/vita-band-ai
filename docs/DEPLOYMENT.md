@@ -198,6 +198,16 @@ Expected output:
 Connected! Received HR: 72.4 BPM | Risk: NORMAL
 ```
 
+### Automated End-to-End Production Verification
+Run the integrated test suite directly against your production deployment:
+```bash
+# 1. Comprehensive REST, WebSocket & Frontend Health Check:
+python scripts/verify_production_deployment.py https://<your-backend-app>.onrender.com https://<your-site>.netlify.app
+
+# 2. Complete 8-Scenario Pipeline Validation:
+python scripts/validate_8_scenarios.py https://<your-backend-app>.onrender.com
+```
+
 ---
 
 ## 7. How to Verify the Live Dashboard
